@@ -8,11 +8,12 @@ def load_library(file_path)
   emo_library=YAML.load_file(file_path)
   #p emo_library
   emo_library.reduce({}) do |memo, (key, value_array)|
-    p key
-    p value_array
-    binding.pry
-    memo[key][:english]=value_array[0]
-    memo[key][:japanese]=value_array[1]
+    #p key
+    #p value_array
+    #binding.pry
+    memo[key]={english: value_array[0], japanese: value_array[1]}
+    #memo[key][:english]=value_array[0]
+    #memo[key][:japanese]=value_array[1]
     memo
   end
 end
