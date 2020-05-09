@@ -21,5 +21,5 @@ def get_english_meaning(file_path, emoticon)
   hash_pair_as_array=library_as_formatted_hash.find{|key, value| value[:japanese]==emoticon}
   #binding.pry
   #full_hash_as_array[0]
-  !!hash_pair_as_array ? hash_pair_as_array[0]
+  !!hash_pair_as_array ? hash_pair_as_array[0] : "Sorry!"
 end
