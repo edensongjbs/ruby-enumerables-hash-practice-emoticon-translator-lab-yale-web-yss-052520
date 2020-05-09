@@ -17,6 +17,5 @@ end
 
 def get_english_meaning(file_path, emoticon)
   # code goes here
-  return_val=load_library(file_path).find{|key, value| value[:japanese]==emoticon}
-  p return_val
+  (load_library(file_path).find{|key, value| value[:japanese]==emoticon})[0]
 end
