@@ -1,9 +1,10 @@
 # require modules here
 require "yaml"
 
-def load_library(path)
+def load_library(file_path)
   # code goes here
-  emo_library=YAML.load_file(path)
+  p file_path
+  emo_library=YAML.load_file(file_path)
   p emo_library
   emo_library.reduce({}) do |memo, (key, value_array)|
     memo[key][:english]=value_array[0]
