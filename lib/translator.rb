@@ -1,9 +1,9 @@
 # require modules here
 require "yaml"
 
-def load_library
+def load_library(path)
   # code goes here
-  emo_library=YAML.load_file('lib/emoticons.yml')
+  emo_library=YAML.load_file(path)
   p emo_library
   emo_library.reduce({}) do |memo, (key, value_array)|
     memo[key][:english]=value_array[0]
