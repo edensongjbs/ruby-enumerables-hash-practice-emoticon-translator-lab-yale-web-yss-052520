@@ -17,7 +17,8 @@ end
 
 def get_english_meaning(file_path, emoticon)
   # code goes here
-  x=load_library(file_path).find{|key, value| value[:japanese]==emoticon}
+  library_as_formatted_hash=load_library(file_path)
+  x=library_as_formatted_hash.find{|key, value| value[:japanese]==emoticon}
   #binding.pry
   #full_hash_as_array[0]
   x[0]
