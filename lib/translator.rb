@@ -15,9 +15,7 @@ def get_japanese_emoticon(file_path, emoticon)
   # code goes here
   library_as_formatted_hash=load_library(file_path)
   hash_pair_as_array=library_as_formatted_hash.find{|key, value| value[:english]==emoticon}
-  #binding.pry
   !!hash_pair_as_array ? hash_pair_as_array[1][:japanese] : "Sorry, that emoticon was not found"
-  #!!library_as_formatted_hash[:emoticon] ? library_as_formatted_hash[:emoticon_name][:japanese] : "Sorry"
 end
 
 def get_english_meaning(file_path, emoticon)
